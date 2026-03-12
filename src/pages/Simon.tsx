@@ -27,7 +27,7 @@ export default function Simon() {
     {
       title: "Painting",
       description:
-        "Interior and exterior painting with clean lines, quality prep, and a professional finish that refreshes your space.",
+        "Exterior painting with clean lines, quality prep, and a professional finish that refreshes your space.",
       icon: Paintbrush,
     },
     {
@@ -222,20 +222,6 @@ export default function Simon() {
                   View Services
                 </a>
               </div>
-
-              <div className="mt-10 grid max-w-xl gap-3 sm:grid-cols-3">
-                {stats.map((item) => (
-                  <div
-                    key={item.label}
-                    className="rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm"
-                  >
-                    <p className="text-base font-bold text-slate-900">
-                      {item.value}
-                    </p>
-                    <p className="mt-1 text-sm text-slate-600">{item.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
             <div className="relative">
@@ -289,9 +275,8 @@ export default function Simon() {
             </h2>
             <p className="mt-4 text-lg text-slate-600">
               Whether you need repairs, upgrades, or a full exterior improvement
-              project, Simon Contracting & Roofing delivers quality work with
-              attention to detail and a commitment to getting the job done
-              right.
+              project, We deliver quality work with attention to detail and a
+              commitment to getting the job done right.
             </p>
           </div>
 
