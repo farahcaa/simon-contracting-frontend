@@ -25,7 +25,7 @@ export default function Simon() {
       title: "Siding",
       description:
         "Siding installation and repair that improves protection, energy efficiency, and the overall look of your home or building.",
-      image: "/pic7.JPG",
+      image: "/siding.JPG",
       imageAlt: "Siding service photo coming soon",
     },
     {
@@ -340,7 +340,7 @@ export default function Simon() {
                 <img
                   src="/family.JPG"
                   alt="Family or team portrait"
-                  className="h-[420px] w-full object-cover"
+                  className=" w-full object-fill"
                 />
               </div>
             </div>
@@ -414,14 +414,14 @@ export default function Simon() {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="mailto:info@clientcompany.com?subject=Project%20Estimate"
+                  href="mailto:simoncontracting.rfg@gmail.com?subject=Project%20Estimate"
                   className="inline-flex items-center gap-2 rounded-full bg-[#2553B8] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#1f469a]"
                 >
                   <Mail className="h-4 w-4" />
                   Email Us
                 </a>
                 <a
-                  href="tel:+10000000000"
+                  href="tel:3177165354"
                   className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-6 py-3.5 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
                 >
                   <Phone className="h-4 w-4" />
