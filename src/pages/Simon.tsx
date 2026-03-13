@@ -1,15 +1,4 @@
-import {
-  ChevronRight,
-  Mail,
-  Phone,
-  ShieldCheck,
-  Hammer,
-  Paintbrush,
-  House,
-  Droplets,
-  Menu,
-  X,
-} from "lucide-react";
+import { ChevronRight, Mail, Phone, ShieldCheck, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Simon() {
@@ -22,25 +11,29 @@ export default function Simon() {
       title: "Metal Roofing",
       description:
         "Long-lasting metal roofing solutions designed to protect your property, boost curb appeal, and stand up to the elements.",
-      icon: House,
+      image: "/pic11.JPG",
+      imageAlt: "Before and after roofing project",
     },
     {
       title: "Painting",
       description:
         "Exterior painting with clean lines, quality prep, and a professional finish that refreshes your space.",
-      icon: Paintbrush,
+      image: "/beforeafter.JPG",
+      imageAlt: "Painting service photo coming soon",
     },
     {
       title: "Siding",
       description:
         "Siding installation and repair that improves protection, energy efficiency, and the overall look of your home or building.",
-      icon: Hammer,
+      image: "/pic7.JPG",
+      imageAlt: "Siding service photo coming soon",
     },
     {
       title: "Gutters",
       description:
         "Dependable gutter installation and replacement that helps direct water away from your property and prevent damage.",
-      icon: Droplets,
+      image: "/gutter.JPG",
+      imageAlt: "Gutter installation project",
     },
   ];
 
@@ -70,7 +63,7 @@ export default function Simon() {
             <img
               src="/logo.JPG"
               alt="Simon Contracting and Roofing"
-              className="h-12 w-auto object-contain md:h-14"
+              className="h-18 w-auto object-contain md:h-20"
             />
             <div className="hidden sm:block">
               <p className="text-base font-bold tracking-wide text-slate-900">
@@ -82,25 +75,25 @@ export default function Simon() {
           <nav className="hidden items-center gap-6 md:flex">
             <a
               href="#services"
-              className="text-sm font-medium text-slate-600 transition hover:text-[#2553B8]"
+              className="text-md font-medium text-slate-600 transition hover:text-[#2553B8]"
             >
               Services
             </a>
             <a
               href="#about"
-              className="text-sm font-medium text-slate-600 transition hover:text-[#2553B8]"
+              className="text-md font-medium text-slate-600 transition hover:text-[#2553B8]"
             >
               About
             </a>
             <a
               href="#gallery"
-              className="text-sm font-medium text-slate-600 transition hover:text-[#2553B8]"
+              className="text-md font-medium text-slate-600 transition hover:text-[#2553B8]"
             >
               Projects
             </a>
             <a
               href="#contact"
-              className="text-sm font-medium text-slate-600 transition hover:text-[#2553B8]"
+              className="text-md font-medium text-slate-600 transition hover:text-[#2553B8]"
             >
               Contact
             </a>
@@ -109,7 +102,7 @@ export default function Simon() {
           <div className="flex items-center gap-3">
             <a
               href="#contact"
-              className="hidden rounded-full bg-[#2553B8] px-4 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#1f469a] md:inline-flex"
+              className="hidden rounded-full bg-[#2553B8] px-4 py-2.5 text-md font-semibold text-white shadow-md transition hover:bg-[#1f469a] md:inline-flex"
             >
               Free Estimate
             </a>
@@ -131,7 +124,7 @@ export default function Simon() {
               <img
                 src="/logo.JPG"
                 alt="Simon Contracting and Roofing"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
 
               <button
@@ -187,7 +180,6 @@ export default function Simon() {
           </div>
         )}
       </header>
-
       <main>
         <section className="relative overflow-hidden border-b border-slate-200 bg-[radial-gradient(circle_at_top_right,_rgba(37,83,184,0.14),_transparent_28%),linear-gradient(180deg,#eff6ff_0%,#f8fafc_58%,#ffffff_100%)]">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-2 md:items-center md:px-6 md:py-20">
@@ -227,7 +219,7 @@ export default function Simon() {
             <div className="relative">
               <div className="overflow-hidden rounded-[2rem] border border-white bg-white shadow-xl shadow-slate-300/50">
                 <img
-                  src="/pic3.JPG"
+                  src="/pic11.JPG"
                   alt="Exterior home improvement project"
                   className="h-[360px] w-full object-cover md:h-[520px]"
                 />
@@ -235,7 +227,6 @@ export default function Simon() {
             </div>
           </div>
         </section>
-
         <section className="border-b border-slate-200 bg-white">
           <div className="mx-auto grid max-w-7xl gap-6 px-5 py-6 text-center md:grid-cols-3 md:px-6">
             <div className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-5">
@@ -260,7 +251,6 @@ export default function Simon() {
             </div>
           </div>
         </section>
-
         <section
           id="services"
           className="mx-auto max-w-7xl px-5 py-16 md:px-6 md:py-20"
@@ -282,27 +272,35 @@ export default function Simon() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {services.map((service) => {
-              const Icon = service.icon;
               return (
                 <div
                   key={service.title}
-                  className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md"
+                  className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-md"
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-[#2553B8]">
-                    <Icon className="h-5 w-5" />
+                  {service.image ? (
+                    <img
+                      src={service.image}
+                      alt={service.imageAlt}
+                      className="h-80 w-full object-cover object-center"
+                    />
+                  ) : (
+                    <div className="flex h-80 w-full items-center justify-center bg-slate-100 px-6 text-center text-sm font-medium text-slate-500">
+                      Photo coming soon
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-slate-900">
+                      {service.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-600">
+                      {service.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">
-                    {service.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
-                    {service.description}
-                  </p>
                 </div>
               );
             })}
           </div>
         </section>
-
         <section id="about" className="border-y border-slate-200 bg-slate-50">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-2 md:items-center md:px-6 md:py-20">
             <div>
@@ -348,7 +346,6 @@ export default function Simon() {
             </div>
           </div>
         </section>
-
         <section
           id="gallery"
           className="mx-auto max-w-7xl px-5 py-16 md:px-6 md:py-20"
@@ -382,7 +379,6 @@ export default function Simon() {
             ))}
           </div>
         </section>
-
         <section className="border-y border-blue-200 bg-[linear-gradient(180deg,#2553B8_0%,#2f61d1_100%)]">
           <div className="mx-auto max-w-7xl px-5 py-14 text-center md:px-6">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-100">
@@ -398,7 +394,6 @@ export default function Simon() {
             </p>
           </div>
         </section>
-
         <section
           id="contact"
           className="mx-auto max-w-7xl px-5 py-16 md:px-6 md:py-20"
@@ -445,28 +440,26 @@ export default function Simon() {
               <div className="mt-6 space-y-4 text-slate-600">
                 <p>
                   <span className="font-semibold text-slate-900">Email:</span>{" "}
-                  info@clientcompany.com
+                  simoncontracting.rfg@gmail.com
                 </p>
                 <p>
                   <span className="font-semibold text-slate-900">Phone:</span>{" "}
-                  (000) 000-0000
+                  (317) 716-5354
                 </p>
                 <p>
                   <span className="font-semibold text-slate-900">
-                    Service Area:
+                    Service Area: Indiana
                   </span>{" "}
-                  Add cities or counties served
                 </p>
                 <p>
                   <span className="font-semibold text-slate-900">Hours:</span>{" "}
-                  Mon–Fri, 8 AM – 6 PM
+                  Always open
                 </p>
               </div>
             </div>
           </div>
         </section>
       </main>
-
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between md:px-6">
           <p>
